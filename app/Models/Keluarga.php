@@ -12,6 +12,7 @@ class Keluarga extends Model
     protected $fillable = [
         'name',
         'alamat',
+        'rayon',
         'provinsi',
         'kabupaten',
         'distrik',

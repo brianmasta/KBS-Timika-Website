@@ -10,6 +10,11 @@
                     <h5>Data Keluarga</h5>
                 </div>
                 <div class="card-body">
+                    @if (Session::has('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('message')}}
+                    </div>
+                    @endif
                     <table class="table table-resposive table-bordered">
                         <thead>
                             <tr>
