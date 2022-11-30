@@ -17,7 +17,7 @@
     <meta name="author" content="Phoenixcoded" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets-admin/images/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="../assets-admin/images/favicon.svg" type="image/x-icon">
 
     <!-- font css -->
     <link rel="stylesheet" href="assets-admin/fonts/font-awsome-pro/css/pro.min.css">
