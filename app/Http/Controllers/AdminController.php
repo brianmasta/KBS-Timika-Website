@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Rayon;
 use App\Models\Keluarga;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -20,12 +22,19 @@ class AdminController extends Controller
 
     public function input()
     {
-        return view('admin.input-kk');
+        $rayon = Rayon::all();
+        return view('admin.input-kk', ['rayon' => $rayon]);
     }
 
     public function create_keluarga(Request $request)
     {
         // dd($request);
         $keluarga = keluarga::create($request->all());
+        if ($keluarga) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data keluarga berhasil ditambah!');
+
+        }
+        return redirect('/data-kk');
     }
 }
