@@ -178,7 +178,7 @@
                     <li><strong>Bapak Y. Kadiwaru</strong></li>
                 </ul>
 
-                Bahwa untuk menunjang pelayanan KBS di mimika  maka di pandang perlu suatu badan resmi yang dapat bekerja sehingga dibentuklah badan pengurus untuk pertama kalinya pada Hari/tanggal, Minggu, 13 juni 1999, Tempat paradise / check poin mil 34, dengan susunan sebagai berikut :
+                Bahwa untuk menunjang pelayanan KBS di Mimika  maka di pandang perlu suatu badan resmi yang dapat bekerja sehingga dibentuklah badan pengurus untuk pertama kalinya pada Hari/tanggal, Minggu, 13 juni 1999, Tempat paradise / check poin mil 34, dengan susunan sebagai berikut :
                 
                 <ul>
                     <li>Pembina/Penasehat: <Strong>Bapak A. Yawan</Strong></li>
@@ -257,7 +257,7 @@
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>JADWAL IBADAH KBS MIMIKA - 2022</h3>
-            <table class="table table-hover table-responsive">
+            <table class="table">
               <thead>
                 <tr>
                   <th>No</th>
