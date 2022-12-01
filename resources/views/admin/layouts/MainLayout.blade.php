@@ -119,10 +119,10 @@
 					</li>
 					<li class="dropdown pc-h-item">
 						<a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							<img src="assets-admin/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
+							<img src="assets-admin/images/user/kbs.png" alt="user-image" class="user-avtar">
 							<span>
-								<span class="user-name">Brian Marandof</span>
-								<span class="user-desc">Administrator</span>
+								<span class="user-name">{{Auth::user()->name}}</span>
+								<span class="user-desc">{{Auth::user()->role->name}}</span>
 							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right pc-h-dropdown">
@@ -145,7 +145,7 @@
 								<i data-feather="lock"></i>
 								<span>Lock Screen</span>
 							</a>
-							<a href="#!" class="dropdown-item">
+							<a href="/logout" class="dropdown-item">
 								<i data-feather="power"></i>
 								<span>Logout</span>
 							</a>
