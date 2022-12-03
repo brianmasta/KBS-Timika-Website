@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>Nextro Able Bootstrap 4 Admin Template</title>
+	<title>KBS | Login</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -20,7 +20,7 @@
 	<meta name="author" content="Phoenixcoded" />
 
 	<!-- Favicon icon -->
-	<link rel="icon" href="assets-admin/images/favicon.svg" type="image/x-icon">
+	<link rel="icon" href="assets/img/kbs.png" type="image/x-icon">
 
 	<!-- font css -->
 	<link rel="stylesheet" href="assets-admin/fonts/font-awsome-pro/css/pro.min.css">
