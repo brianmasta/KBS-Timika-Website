@@ -50,7 +50,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikan">Pendidikan</label>
-                                    <input name="pendidikan" type="text" class="form-control" id="pendidikan" placeholder="Pendidikan" required>
+                                    <select name="pendidikan" class="form-control" required>
+                                        <option>Pilih</option>
+                                        <option value="Tidak / Belum Sekolah">Tidak / Belum Sekolah</option>
+                                        <option value="Tamat SD / Sederajat">Tamat SD/ Sederajat</option>
+                                        <option value="SLTA / SEDERAJAT">SLTA / SEDERAJAT</option>
+                                        <option value="SLTP/SEDERAJAT">SLTP/SEDERAJAT</option>
+                                        <option value="BELUM TAMAT SD/SEDERAJAT">BELUM TAMAT SD/SEDERAJAT</option>
+                                        <option value="TDIPLOMA IV/ STRATA I">DIPLOMA IV/ STRATA I</option>
+                                        <option value="TDIPLOMA I / II">DIPLOMA I / II</option>
+                                        <option value="AKADEMI/ DIPLOMA III/S. MUDA">AKADEMI/ DIPLOMA III/S. MUDA</option>
+                                        <option value="STRATA II">STRATA II</option>
+                                        <option value="STRATA III">STRATA III</option>
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
@@ -62,17 +74,39 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="darah">Golongan Darah</label>
-                                    <input name="darah" type="text" class="form-control" id="darah" placeholder="Gologan Darah" required>
+                                    <select name="darah" class="form-control" required>
+                                        <option>Pilih</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="AB">AB</option>
+                                        <option value="O">O</option>
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="perkawinan">Perkawinan</label>
-                                    <input name="perkawinan" type="text" class="form-control" id="perkawinan" placeholder="Perkawinan" required>
+                                    <select name="perkawainan" class="form-control" required>
+                                        <option>Pilih</option>
+                                        <option value="Belum Kawin">Belum Kawin</option>
+                                        <option value="Kawin">Kawin</option>
+                                        <option value="Cerai Hidup">Cerai Hidup</option>
+                                        <option value="Cerai Mati">Cerai Mati</option>
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="hubungan">Hubungan Keluarga</label>
-                                    <input name="hubungan" type="text" class="form-control" id="hubungan" placeholder="Hubungan Keluarga" required>
+                                    <select name="hunungan" class="form-control" required>
+                                        <option>Pilih</option>
+                                        <option value="Suami">Suami</option>
+                                        <option value="Istri">Istri</option>
+                                        <option value="Anak">Anak</option>
+                                        <option value="Menantu">Menantu</option>
+                                        <option value="Orang Tua">Orang Tua</option>
+                                        <option value="Mertua">Mertua</option>
+                                        <option value="Famili Lain">Famili Lain</option>
+                                        <option value="Pembantu">Pembantu</option>
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
@@ -82,7 +116,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kewarganegaraan">Kewarganegaraan</label>
-                                    <input name="kewarganegaraan" type="text" class="form-control" id="kewarganegaraan" placeholder="Kewarganegaraan" required>
+                                    <select name="kewarganegaraan" class="form-control" required>
+                                        <option>Pilih</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Asing">Asing</option>
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
