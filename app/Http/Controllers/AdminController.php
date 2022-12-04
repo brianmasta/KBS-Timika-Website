@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rayon;
 use App\Models\Keluarga;
+use App\Models\Anngota;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -36,5 +37,18 @@ class AdminController extends Controller
 
         }
         return redirect('/data-kk');
+    }
+
+    public function show($id)
+    {
+        // $keluarga = Keluarga::with('anggotas')->get();
+        // // dd($anggota);
+        // return view('admin.detail-kk', ['keluarga' => $keluarga]);
+
+        $anggota = Keluarga::with(['anggotas'])->findOrFail($id);
+        // dd($keluarga);
+        return view('admin.detail-kk', ['anggota' => $anggota]);
+
+        // return view('admin.detail-kk');
     }
 }

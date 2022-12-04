@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Anggota;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Keluarga extends Model
 {
@@ -21,4 +22,10 @@ class Keluarga extends Model
         'pos',
         'hp'
     ];
+
+
+    public function anggotas()
+    {
+        return $this->hasMany(Anggota::class, 'kk_id', 'id');
+    }
 }

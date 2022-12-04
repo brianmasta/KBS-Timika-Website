@@ -27,3 +27,4 @@ Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');
 Route::get('/data-kk', [AdminController::class, 'data'])->middleware('auth');
 Route::get('/input-kk', [AdminController::class, 'input'])->middleware('auth');
 Route::post('/keluarga-add', [AdminController::class, 'create_keluarga']);
+Route::get('/detail-kk/{id}', [AdminController::class, 'show'])->middleware('auth');

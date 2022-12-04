@@ -17,16 +17,16 @@
     <meta name="author" content="Phoenixcoded" />
 
     <!-- Favicon icon -->
-	<link rel="icon" href="assets/img/kbs.png" type="image/x-icon">
+	<link rel="icon" href="{{asset('assets/img/kbs.png')}}" type="image/x-icon">
 
     <!-- font css -->
-    <link rel="stylesheet" href="assets-admin/fonts/font-awsome-pro/css/pro.min.css">
-    <link rel="stylesheet" href="assets-admin/fonts/feather.css">
-    <link rel="stylesheet" href="assets-admin/fonts/fontawesome.css">
+    <link rel="stylesheet" href="{{asset('assets-admin/fonts/font-awsome-pro/css/pro.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets-admin/fonts/feather.css')}}">
+    <link rel="stylesheet" href="{{asset('assets-admin/fonts/fontawesome.css')}}">
 
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets-admin/css/style.css">
-    <link rel="stylesheet" href="assets-admin/css/customizer.css">
+    <link rel="stylesheet" href="{{asset('assets-admin/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets-admin/css/customizer.css')}}">
 
 </head>
 
@@ -41,7 +41,7 @@
 	<!-- [ Mobile header ] start -->
 	<div class="pc-mob-header pc-header">
 		<div class="pcm-logo">
-			<img src="assets-admin/images/logo.svg" alt="" class="logo logo-lg">
+			<img src="{{asset('assets-admin/images/logo.svg')}}" alt="" class="logo logo-lg">
 		</div>
 		<div class="pcm-toolbar">
 			<a href="#!" class="pc-head-link" id="mobile-collapse">
@@ -119,7 +119,7 @@
 					</li>
 					<li class="dropdown pc-h-item">
 						<a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							<img src="assets-admin/images/user/kbs.png" alt="user-image" class="user-avtar">
+							<img src="{{asset('assets-admin/images/user/kbs.png')}}" alt="user-image" class="user-avtar">
 							<span>
 								<span class="user-name">{{Auth::user()->name}}</span>
 								<span class="user-desc">{{Auth::user()->role->name}}</span>
@@ -232,22 +232,22 @@
     <![endif]-->
     <!-- Warning Section Ends -->
     <!-- Required Js -->
-    <script src="assets-admin/js/vendor-all.min.js"></script>
-    <script src="assets-admin/js/plugins/bootstrap.min.js"></script>
-    <script src="assets-admin/js/plugins/feather.min.js"></script>
-    <script src="assets-admin/js/pcoded.min.js"></script>
+    <script src="{{asset('assets-admin/js/vendor-all.min.js')}}"></script>
+    <script src="{{asset('assets-admin/js/plugins/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets-admin/js/plugins/feather.min.js')}}"></script>
+    <script src="{{asset('assets-admin/js/pcoded.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="assets-admin/js/plugins/clipboard.min.js"></script>
-    <script src="assets-admin/js/uikit.min.js"></script>
+    <script src="{{asset('assets-admin/js/plugins/clipboard.min.js')}}"></script>
+    <script src="{{asset('assets-admin/js/uikit.min.js')}}"></script>
 
 <!-- Apex Chart -->
-<script src="assets-admin/js/plugins/apexcharts.min.js"></script>
+<script src="{{asset('assets-admin/js/plugins/apexcharts.min.js')}}"></script>
 {{-- <script>
     $("body").append('<div class="fixed-button active"><a href="https://1.envato.market/VGznk" target="_blank" class="btn btn-md btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro</a> </div>');
 </script> --}}
 
 <!-- custom-chart js -->
-<script src="assets-admin/js/pages/dashboard-sale.js"></script>
+<script src="{{asset('assets-admin/js/pages/dashboard-sale.js')}}"></script>
 </body>
 
 </html>
