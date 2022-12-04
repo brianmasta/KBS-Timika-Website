@@ -51,4 +51,11 @@ class AdminController extends Controller
 
         // return view('admin.detail-kk');
     }
+
+    public function input_anggota($id)
+    {
+        $keluarga = Keluarga::findOrFail($id);
+        return view('admin.input-anggota', ['keluarga' => $keluarga]);
+        // dd($keluarga);
+    }
 }

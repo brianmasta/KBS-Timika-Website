@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <hr>
-                    <a class="btn btn-warning btn-sm" href="/">Tambah</a>
+                    <a class="btn btn-warning btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah</a>
                     <br>
                     <br>
                     <table class="table">
