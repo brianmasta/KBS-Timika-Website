@@ -45,29 +45,32 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="agama">Agama</label>
-                                    <input name="tanggal_lahir" type="text" class="form-control" id="agama" placeholder="Agama" required>
+                                    <select name="agama" class="form-control" required>
+                                        <option>Pilih</option>
+                                        @foreach ($agama as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikan">Pendidikan</label>
                                     <select name="pendidikan" class="form-control" required>
                                         <option>Pilih</option>
-                                        <option value="Tidak / Belum Sekolah">Tidak / Belum Sekolah</option>
-                                        <option value="Tamat SD / Sederajat">Tamat SD/ Sederajat</option>
-                                        <option value="SLTA / SEDERAJAT">SLTA / SEDERAJAT</option>
-                                        <option value="SLTP/SEDERAJAT">SLTP/SEDERAJAT</option>
-                                        <option value="BELUM TAMAT SD/SEDERAJAT">BELUM TAMAT SD/SEDERAJAT</option>
-                                        <option value="TDIPLOMA IV/ STRATA I">DIPLOMA IV/ STRATA I</option>
-                                        <option value="TDIPLOMA I / II">DIPLOMA I / II</option>
-                                        <option value="AKADEMI/ DIPLOMA III/S. MUDA">AKADEMI/ DIPLOMA III/S. MUDA</option>
-                                        <option value="STRATA II">STRATA II</option>
-                                        <option value="STRATA III">STRATA III</option>
+                                        @foreach ($pendidikan as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
-                                    <input name="pekerjaan" type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" required>
+                                    <select name="pekerjaan" class="form-control" required>
+                                        <option>Pilih</option>
+                                        @foreach ($pekerjaan as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
+                                    </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                             </div>

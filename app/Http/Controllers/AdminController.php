@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agama;
 use App\Models\Rayon;
-use App\Models\Keluarga;
 use App\Models\Anngota;
+use App\Models\Keluarga;
+use App\Models\Pekerjaan;
+use App\Models\Pendidikan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -55,7 +58,10 @@ class AdminController extends Controller
     public function input_anggota($id)
     {
         $keluarga = Keluarga::findOrFail($id);
-        return view('admin.input-anggota', ['keluarga' => $keluarga]);
+        $pendidikan = Pendidikan::all();
+        $pekerjaan = Pekerjaan::all();
+        $agama = Agama::all();
+        return view('admin.input-anggota', ['keluarga' => $keluarga, 'pendidikan' => $pendidikan, 'pekerjaan' => $pekerjaan, 'agama' => $agama]);
         // dd($keluarga);
     }
 }
