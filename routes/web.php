@@ -32,3 +32,4 @@ Route::get('/detail-kk/{id}', [AdminController::class, 'show'])->middleware('aut
 Route::get('/input-anggota/{id}', [AdminController::class, 'input_anggota'])->middleware('auth');
 
 Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');
+Route::get('/edit-anggota/{id}', [AdminController::class, 'edit_anggota'])->middleware('auth');

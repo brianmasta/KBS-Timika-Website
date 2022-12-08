@@ -93,9 +93,8 @@
                                 <td>{{$item->perkawinan}}</td>
                                 <td>
                                     <div class="btn-group-sm">
-                                        {{-- <button type="button" class="btn btn-primary btn-sm">Detail</button> --}}
                                         <a class="btn btn-primary btn-sm" href="/">Detail</a>
-                                        <button type="button" class="btn btn-warning btn-sm">Edit</button>
+                                        <a class="btn btn-warning btn-sm" href="/edit-anggota/{{$item->id}}">Edit</a>
                                         <button type="button" class="btn btn-danger btn-sm">Hapus</button>
                                     </div>
                                 </td>

@@ -77,4 +77,13 @@ class AdminController extends Controller
         return redirect('/detail-kk/'.$anggota->kk_id);
         // dd($request->kk_id);
     }
+
+    public function edit_anggota($id)
+    {
+        $anggota = Anggota::findOrFail($id);
+        $pendidikan = Pendidikan::all();
+        $pekerjaan = Pekerjaan::all();
+        $agama = Agama::get('id', 'name');
+        return view('admin.edit-anggota', ['anggota' => $anggota, 'pendidikan' => $pendidikan, 'pekerjaan' => $pekerjaan, 'agama' => $agama]);
+    }
 }
