@@ -10,7 +10,7 @@
                     <h5>Tambah Anggota Keluarga / {{$keluarga->name}}</h5>
                 </div>
                 <div class="card-body">
-                    <form action="keluarga-add" method="post">
+                    <form method="post" action="/anggota-add" >
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
@@ -21,13 +21,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input name="name" type="number" class="form-control" id="nik" placeholder="Nomor Induk Kependudukan" required>
+                                    <input name="nik" type="number" class="form-control" id="nik" placeholder="Nomor Induk Kependudukan" required>
                                     <small id="emailHelp" class="form-text text-muted">NIK sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
                                     <select name="jenis_kelamin" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         <option value="L">Laki-Laki</option>
                                         <option value="P">Perempuan</option>
                                     </select>
@@ -46,7 +46,7 @@
                                 <div class="form-group">
                                     <label for="agama">Agama</label>
                                     <select name="agama" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         @foreach ($agama as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <label for="pendidikan">Pendidikan</label>
                                     <select name="pendidikan" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         @foreach ($pendidikan as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
                                     <select name="pekerjaan" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         @foreach ($pekerjaan as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -78,7 +78,7 @@
                                 <div class="form-group">
                                     <label for="darah">Golongan Darah</label>
                                     <select name="darah" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         <option value="A">A</option>
                                         <option value="B">B</option>
                                         <option value="AB">AB</option>
@@ -88,8 +88,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="perkawinan">Perkawinan</label>
-                                    <select name="perkawainan" class="form-control" required>
-                                        <option>Pilih</option>
+                                    <select name="perkawinan" class="form-control" required>
+                                        <option value="">Pilih</option>
                                         <option value="Belum Kawin">Belum Kawin</option>
                                         <option value="Kawin">Kawin</option>
                                         <option value="Cerai Hidup">Cerai Hidup</option>
@@ -99,8 +99,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="hubungan">Hubungan Keluarga</label>
-                                    <select name="hunungan" class="form-control" required>
-                                        <option>Pilih</option>
+                                    <select name="hubungan" class="form-control" required>
+                                        <option value="">Pilih</option>
                                         <option value="Suami">Suami</option>
                                         <option value="Istri">Istri</option>
                                         <option value="Anak">Anak</option>
@@ -120,7 +120,7 @@
                                 <div class="form-group">
                                     <label for="kewarganegaraan">Kewarganegaraan</label>
                                     <select name="kewarganegaraan" class="form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         <option value="Indonesia">Indonesia</option>
                                         <option value="Asing">Asing</option>
                                     </select>
@@ -137,9 +137,10 @@
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                             </div>
+                            <input type="hidden" value="{{$keluarga->id}}" name="kk_id">
                             <div class="form-group">
                                 <button type="submit" class="btn  btn-primary">Submit</button>
-                                <a class="btn  btn-danger"href="/admin">Batal</a>
+                                <a class="btn btn-danger"href="/detail-kk/{{$keluarga->id}}">Batal</a>
                             </div>
                         </div>
                     </form>

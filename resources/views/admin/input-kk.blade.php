@@ -27,7 +27,7 @@
                                 <div class="form-group">
                                     <label for="alamat">Rayon</label>
                                     <select name="rayon" class="mb-3 form-control" required>
-                                        <option>Pilih</option>
+                                        <option value="">Pilih</option>
                                         @foreach ($rayon as $item)
                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach

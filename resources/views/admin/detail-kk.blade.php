@@ -67,6 +67,11 @@
                     <a class="btn btn-warning btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah</a>
                     <br>
                     <br>
+                    @if (Session::has('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('message')}}
+                    </div>
+                    @endif
                     <table class="table">
                         <thead>
                             <tr>
@@ -80,7 +85,7 @@
                         </thead>
                         <tbody>
                             @foreach ($anggota->anggotas as $item)
-                             <tr>
+                            <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->hubungan}}</td>

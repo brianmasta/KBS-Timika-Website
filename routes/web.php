@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AnggotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');
 Route::get('/data-kk', [AdminController::class, 'data'])->middleware('auth');
 Route::get('/input-kk', [AdminController::class, 'input'])->middleware('auth');
-Route::post('/keluarga-add', [AdminController::class, 'create_keluarga']);
+Route::post('/keluarga-add', [AdminController::class, 'create_keluarga'])->middleware('auth');
 Route::get('/detail-kk/{id}', [AdminController::class, 'show'])->middleware('auth');
 Route::get('/input-anggota/{id}', [AdminController::class, 'input_anggota'])->middleware('auth');
+
+Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');

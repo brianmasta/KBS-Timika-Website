@@ -170,7 +170,7 @@
                             <h5 class="m-b-10">Dashboard</h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                             <li class="breadcrumb-item">@yield('title')</li>
                         </ul>
                     </div>

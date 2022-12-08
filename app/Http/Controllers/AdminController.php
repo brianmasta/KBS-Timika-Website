@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agama;
 use App\Models\Rayon;
+use App\Models\Anggota;
 use App\Models\Anngota;
 use App\Models\Keluarga;
 use App\Models\Pekerjaan;
@@ -63,5 +64,17 @@ class AdminController extends Controller
         $agama = Agama::all();
         return view('admin.input-anggota', ['keluarga' => $keluarga, 'pendidikan' => $pendidikan, 'pekerjaan' => $pekerjaan, 'agama' => $agama]);
         // dd($keluarga);
+    }
+
+    public function create_anggota(Request $request)
+    {
+        $anggota = Anggota::create($request->all());
+        if($anggota) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data Anggota berhasil ditambah!');
+        }
+
+        return redirect('/detail-kk/'.$anggota->kk_id);
+        // dd($request->kk_id);
     }
 }
