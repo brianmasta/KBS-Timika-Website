@@ -35,18 +35,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="tempat_lahir">Tempat Lahir</label>
-                                    <input name="tempat_lahir" type="text" class="form-control" id="tempat_lahir" placeholder="Tempat Lahir" required>
+                                    <input value="{{$anggota->tempat_lahir}}" name="tempat_lahir" type="text" class="form-control" id="tempat_lahir" placeholder="Tempat Lahir" required>
                                     <small id="emailHelp" class="form-text text-muted">Tempat lahir sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggal_lahir">Tanggal Lahir</label>
-                                    <input name="tanggal_lahir" type="date" class="form-control" id="tanggal_lahir" placeholder="Tempat Lahir" required>
+                                    <input value="{{$anggota->tanggal_lahir}}" name="tanggal_lahir" type="date" class="form-control" id="tanggal_lahir" placeholder="Tempat Lahir" required>
                                     <small id="emailHelp" class="form-text text-muted">Tanggal lahir sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="agama">Agama</label>
                                     <select name="agama" class="form-control" required>
-                                        <option value="{{$anggota->id}}">{{$anggota->name}}</option>
+                                        <option value="{{$anggota->agama->id}}">{{$anggota->agama->name}}</option>
                                         @foreach ($agama as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <label for="pendidikan">Pendidikan</label>
                                     <select name="pendidikan" class="form-control" required>
-                                        <option value="">Pilih</option>
+                                        <option value="{{$anggota->pendidikan->id}}">{{$anggota->pendidikan->name}}</option>
                                         @foreach ($pendidikan as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
                                     <select name="pekerjaan" class="form-control" required>
-                                        <option value="">Pilih</option>
+                                        <option value="{{$anggota->pekerjaan->id}}">{{$anggota->pekerjaan->name}}</option>
                                         @foreach ($pekerjaan as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>
                                         @endforeach
@@ -78,62 +78,56 @@
                                 <div class="form-group">
                                     <label for="darah">Golongan Darah</label>
                                     <select name="darah" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="AB">AB</option>
-                                        <option value="O">O</option>
+                                        <option value="{{$anggota->darah->id}}">{{$anggota->darah->name}}</option>
+                                        @foreach ($darah as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="perkawinan">Perkawinan</label>
                                     <select name="perkawinan" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="Belum Kawin">Belum Kawin</option>
-                                        <option value="Kawin">Kawin</option>
-                                        <option value="Cerai Hidup">Cerai Hidup</option>
-                                        <option value="Cerai Mati">Cerai Mati</option>
+                                        <option value="{{$anggota->perkawinan->id}}">{{$anggota->perkawinan->name}}</option>
+                                        @foreach ($perkawinan as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="hubungan">Hubungan Keluarga</label>
                                     <select name="hubungan" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="Suami">Suami</option>
-                                        <option value="Istri">Istri</option>
-                                        <option value="Anak">Anak</option>
-                                        <option value="Menantu">Menantu</option>
-                                        <option value="Orang Tua">Orang Tua</option>
-                                        <option value="Mertua">Mertua</option>
-                                        <option value="Famili Lain">Famili Lain</option>
-                                        <option value="Pembantu">Pembantu</option>
+                                        <option value="{{$anggota->hubungan->id}}">{{$anggota->hubungan->name}}</option>
+                                        @foreach ($hubungan as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="suku">Suku</label>
-                                    <input name="suku" type="text" class="form-control" id="suku" placeholder="Suku" required>
+                                    <input value="{{$anggota->suku}}" name="suku" type="text" class="form-control" id="suku" placeholder="Suku" required>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="kewarganegaraan">Kewarganegaraan</label>
                                     <select name="kewarganegaraan" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="Indonesia">Indonesia</option>
-                                        <option value="Asing">Asing</option>
+                                        <option value="{{$anggota->kewarganegaraan->id}}">{{$anggota->kewarganegaraan->name}}</option>
+                                        @foreach ($kewarganegaraan as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_ayah">Nama Ayah</label>
-                                    <input name="nama_ayah" type="text" class="form-control" id="nama_ayah" placeholder="Nama Ayah" required>
+                                    <input value="{{$anggota->nama_ayah}}" name="nama_ayah" type="text" class="form-control" id="nama_ayah" placeholder="Nama Ayah" required>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_ibu">Nama Ibu</label>
-                                    <input name="nama_ibu" type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" required>
+                                    <input value="{{$anggota->nama_ibu}}" name="nama_ibu" type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" required>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                             </div>

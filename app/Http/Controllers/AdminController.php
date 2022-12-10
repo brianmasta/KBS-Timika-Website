@@ -104,7 +104,20 @@ class AdminController extends Controller
         $anggota = Anggota::findOrFail($id);
         $pendidikan = Pendidikan::all();
         $pekerjaan = Pekerjaan::all();
-        $agama = Agama::get('id', 'name');
-        return view('admin.edit-anggota', ['anggota' => $anggota, 'pendidikan' => $pendidikan, 'pekerjaan' => $pekerjaan, 'agama' => $agama]);
+        $agama = Agama::all();
+        $darah = Darah::all();
+        $hubungan = Hubungan::all();
+        $perkawinan = Perkawinan::all();
+        $kewarganegaraan = Kewarganegaraan::all();
+        return view('admin.edit-anggota', [
+            'anggota' => $anggota, 
+            'pendidikan' => $pendidikan, 
+            'pekerjaan' => $pekerjaan, 
+            'agama' => $agama, 
+            'darah' => $darah, 
+            'hubungan' => $hubungan,
+            'perkawinan' => $perkawinan,
+            'kewarganegaraan' => $kewarganegaraan
+        ]);
     }
 }
