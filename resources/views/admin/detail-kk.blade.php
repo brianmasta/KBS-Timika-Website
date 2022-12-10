@@ -88,9 +88,9 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->name}}</td>
-                                <td>{{$item->hubungan}}</td>
-                                <td>{{$item->pendidikan}}</td>
-                                <td>{{$item->perkawinan}}</td>
+                                <td>{{$item->hubungan->name}}</td>
+                                <td>{{$item->pendidikan->name}}</td>
+                                <td>{{$item->perkawinan->name}}</td>
                                 <td>
                                     <div class="btn-group-sm">
                                         <a class="btn btn-primary btn-sm" href="/">Detail</a>
