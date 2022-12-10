@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
-                                    <select name="jenis_kelamin_id" class="form-control" required>
+                                    <select name="kelamin_id" class="form-control" required>
                                         <option value="">Pilih</option>
                                         @foreach ($kelamin as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>>

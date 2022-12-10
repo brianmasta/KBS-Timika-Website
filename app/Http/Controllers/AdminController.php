@@ -102,13 +102,14 @@ class AdminController extends Controller
     public function edit_anggota($id)
     {
         $anggota = Anggota::findOrFail($id);
-        $pendidikan = Pendidikan::all();
-        $pekerjaan = Pekerjaan::all();
-        $agama = Agama::all();
-        $darah = Darah::all();
-        $hubungan = Hubungan::all();
-        $perkawinan = Perkawinan::all();
-        $kewarganegaraan = Kewarganegaraan::all();
+        $kelamin = Kelamin::where('id', '!=', $anggota->kelamin_id)->get(['id', 'name']);
+        $pendidikan = Pendidikan::where('id', '!=', $anggota->pendidikan_id)->get(['id', 'name']);
+        $pekerjaan = Pekerjaan::where('id', '!=', $anggota->pekerjaan_id)->get(['id', 'name']);
+        $agama = Agama::where('id', '!=', $anggota->agama_id)->get(['id', 'name']);
+        $darah = Darah::where('id', '!=', $anggota->darah_id)->get(['id', 'name']);
+        $hubungan = Hubungan::where('id', '!=', $anggota->hubungan_id)->get(['id', 'name']);
+        $perkawinan = Perkawinan::where('id', '!=', $anggota->perkawinan_id)->get(['id', 'name']);
+        $kewarganegaraan = Kewarganegaraan::where('id', '!=', $anggota->kewarganegaraan_id)->get(['id', 'name']);
         return view('admin.edit-anggota', [
             'anggota' => $anggota, 
             'pendidikan' => $pendidikan, 
@@ -117,7 +118,8 @@ class AdminController extends Controller
             'darah' => $darah, 
             'hubungan' => $hubungan,
             'perkawinan' => $perkawinan,
-            'kewarganegaraan' => $kewarganegaraan
+            'kewarganegaraan' => $kewarganegaraan,
+            'kelamin' => $kelamin
         ]);
     }
 }

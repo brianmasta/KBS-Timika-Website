@@ -27,9 +27,10 @@
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
                                     <select name="jenis_kelamin" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="L">Laki-Laki</option>
-                                        <option value="P">Perempuan</option>
+                                        <option value="{{$anggota->kelamin->id}}">{{$anggota->kelamin->name}}</option>
+                                        @foreach ($kelamin as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">NIK sesuai KTP.</small>
                                 </div>

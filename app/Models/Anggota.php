@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Agama;
 use App\Models\Darah;
+use App\Models\Kelamin;
 use App\Models\Hubungan;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
@@ -19,7 +20,7 @@ class Anggota extends Model
     protected $fillable = [
         'name',
         'nik',
-        'jenis_kelamin_id',
+        'kelamin_id',
         'tempat_lahir',
         'tanggal_lahir',
         'agama_id',
@@ -68,5 +69,10 @@ class Anggota extends Model
     public function kewarganegaraan()
     {
         return $this->belongsTo(Kewarganegaraan::class);
+    }
+
+    public function kelamin()
+    {
+        return $this->belongsTo(Kelamin::class);
     }
 }
