@@ -6,6 +6,7 @@ use App\Models\Agama;
 use App\Models\Darah;
 use App\Models\Kelamin;
 use App\Models\Hubungan;
+use App\Models\Keluarga;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
 use App\Models\Perkawinan;
@@ -75,4 +76,5 @@ class Anggota extends Model
     {
         return $this->belongsTo(Kelamin::class);
     }
+
 }

@@ -134,7 +134,7 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn  btn-primary">Submit</button>
-                                <a class="btn btn-danger"href="/detail-kk/{{$anggota->id}}">Batal</a>
+                                <a class="btn btn-danger"href="/detail-kk/{{$anggota->kk_id}}">Batal</a>
                             </div>
                         </div>
                     </form>
