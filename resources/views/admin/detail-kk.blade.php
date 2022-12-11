@@ -24,7 +24,7 @@
                                     </tr>
                                     <tr>
                                         <th>Rayon</th>
-                                        <td>: {{$anggota->rayon}}</td>
+                                        <td>: {{$anggota->rayon->name}}</td>
                                     </tr>
                                     <tr>
                                         <th>Alamat</th>

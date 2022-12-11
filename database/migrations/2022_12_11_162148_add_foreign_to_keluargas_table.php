@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('keluargas', function (Blueprint $table) {
-            $table->string('rt', 10)->after('kelurahan');
+            $table->foreign('rayon_id')->references('id')->on('rayons')->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 
@@ -26,7 +27,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('keluargas', function (Blueprint $table) {
-            $table->dropColumn('rt');
+            //
         });
     }
 };
