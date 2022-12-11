@@ -8,7 +8,6 @@
             <div class="card">
                 <div class="card-header">
                     <h5>Tambah Anggota Keluarga / {{$keluarga->name}}</h5>
-                    <h3>{{$keluarga}}</h3>
                 </div>
                 <div class="card-body">
                     <form method="post" action="/anggota-add" >
