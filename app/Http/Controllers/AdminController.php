@@ -122,4 +122,18 @@ class AdminController extends Controller
             'kelamin' => $kelamin
         ]);
     }
+
+    public function update_anggota(Request $request, $id)
+    {
+        $anggota = Anggota::findOrfail($id);
+        
+        $anggota->update($request->all());
+
+        if($anggota) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data Anggota Berhasil Update!');
+        }
+
+        return redirect('/detail-kk/'.$anggota->kk_id);
+    }
 }

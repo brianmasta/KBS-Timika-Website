@@ -33,3 +33,4 @@ Route::get('/input-anggota/{id}', [AdminController::class, 'input_anggota'])->mi
 
 Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');
 Route::get('/edit-anggota/{id}', [AdminController::class, 'edit_anggota'])->middleware('auth');
+Route::put('/update-anggota/{id}', [AdminController::class, 'update_anggota'])->middleware('auth');

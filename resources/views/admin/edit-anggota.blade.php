@@ -10,8 +10,9 @@
                     <h5>Edit Anggota Keluarga</h5>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/anggota-update" >
+                    <form method="post" action="/update-anggota/{{$anggota->id}}" >
                         @csrf
+                        @method('PUT')
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -26,10 +27,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="jenis_kelamin">Jenis Kelamin</label>
-                                    <select name="jenis_kelamin" class="form-control" required>
+                                    <select name="kelamin_id" class="form-control" required>
                                         <option value="{{$anggota->kelamin->id}}">{{$anggota->kelamin->name}}</option>
                                         @foreach ($kelamin as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">NIK sesuai KTP.</small>
@@ -46,30 +47,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="agama">Agama</label>
-                                    <select name="agama" class="form-control" required>
+                                    <select name="agama_id" class="form-control" required>
                                         <option value="{{$anggota->agama->id}}">{{$anggota->agama->name}}</option>
                                         @foreach ($agama as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikan">Pendidikan</label>
-                                    <select name="pendidikan" class="form-control" required>
+                                    <select name="pendidikan_id" class="form-control" required>
                                         <option value="{{$anggota->pendidikan->id}}">{{$anggota->pendidikan->name}}</option>
                                         @foreach ($pendidikan as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
-                                    <select name="pekerjaan" class="form-control" required>
+                                    <select name="pekerjaan_id" class="form-control" required>
                                         <option value="{{$anggota->pekerjaan->id}}">{{$anggota->pekerjaan->name}}</option>
                                         @foreach ($pekerjaan as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
@@ -78,30 +79,30 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="darah">Golongan Darah</label>
-                                    <select name="darah" class="form-control" required>
+                                    <select name="darah_id" class="form-control" required>
                                         <option value="{{$anggota->darah->id}}">{{$anggota->darah->name}}</option>
                                         @foreach ($darah as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="perkawinan">Perkawinan</label>
-                                    <select name="perkawinan" class="form-control" required>
+                                    <select name="perkawinan_id" class="form-control" required>
                                         <option value="{{$anggota->perkawinan->id}}">{{$anggota->perkawinan->name}}</option>
                                         @foreach ($perkawinan as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="hubungan">Hubungan Keluarga</label>
-                                    <select name="hubungan" class="form-control" required>
+                                    <select name="hubungan_id" class="form-control" required>
                                         <option value="{{$anggota->hubungan->id}}">{{$anggota->hubungan->name}}</option>
                                         @foreach ($hubungan as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
@@ -113,10 +114,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kewarganegaraan">Kewarganegaraan</label>
-                                    <select name="kewarganegaraan" class="form-control" required>
+                                    <select name="kewarganegaraan_id" class="form-control" required>
                                         <option value="{{$anggota->kewarganegaraan->id}}">{{$anggota->kewarganegaraan->name}}</option>
                                         @foreach ($kewarganegaraan as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>>
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                     <small id="emailHelp" class="form-text text-muted">sesuai KTP.</small>
@@ -133,7 +134,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn  btn-primary">Submit</button>
+                                <button type="submit" class="btn  btn-primary">Update</button>
                                 <a class="btn btn-danger"href="/detail-kk/{{$anggota->kk_id}}">Batal</a>
                             </div>
                         </div>
