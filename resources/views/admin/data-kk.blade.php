@@ -1,6 +1,6 @@
 @extends('admin.layouts.MainLayout')
 
-@section('title', 'Data kk')
+@section('title', 'Data Kaluarga')
 
 @section('content')
     <div class="row">
@@ -36,7 +36,7 @@
                                     <div class="btn-group-sm">
                                         {{-- <button type="button" class="btn btn-primary btn-sm">Detail</button> --}}
                                         <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
-                                        <button type="button" class="btn btn-warning btn-sm">Edit</button>
+                                        <a class="btn btn-warning btn-sm" href="/edit-kk/{{$item->id}}">Edit</a>
                                         <button type="button" class="btn btn-danger btn-sm">Hapus</button>
                                     </div>
                                 </td>

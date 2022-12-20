@@ -29,7 +29,9 @@ Route::get('/data-kk', [AdminController::class, 'data'])->middleware('auth');
 Route::get('/input-kk', [AdminController::class, 'input'])->middleware('auth');
 Route::post('/keluarga-add', [AdminController::class, 'create_keluarga'])->middleware('auth');
 Route::get('/detail-kk/{id}', [AdminController::class, 'show'])->middleware('auth');
+Route::get('/edit-kk/{id}', [AdminController::class, 'edit_kk'])->middleware('auth');
 Route::get('/input-anggota/{id}', [AdminController::class, 'input_anggota'])->middleware('auth');
+Route::put('/update-keluarga/{id}', [AdminController::class, 'update_keluarga'])->middleware('auth');
 
 Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');
 Route::get('/edit-anggota/{id}', [AdminController::class, 'edit_anggota'])->middleware('auth');

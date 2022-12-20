@@ -63,8 +63,9 @@
                             </div>
                         </div>
                     </div>
+                    <a class="btn btn-danger btn-sm" href="/data-kk">Kembali</a>
                     <hr>
-                    <a class="btn btn-warning btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah</a>
+                    <a class="btn btn-warning btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah Anggota</a>
                     <br>
                     <br>
                     @if (Session::has('status'))

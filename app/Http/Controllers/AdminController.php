@@ -136,4 +136,26 @@ class AdminController extends Controller
 
         return redirect('/detail-kk/'.$anggota->kk_id);
     }
+
+    public function edit_kk($id)
+    {
+        $keluarga = Keluarga::with(['rayon'])->findOrFail($id);
+        $rayon = Rayon::where('id', '!=', $keluarga->rayon_id)->get(['id', 'name']);
+
+        return view('admin.edit-kk', ['keluarga' => $keluarga, 'rayon' => $rayon]);
+    }
+
+    public function update_keluarga(Request $request, $id)
+    {
+        $keluarga = Keluarga::findOrfail($id);
+
+        $keluarga->update($request->all());
+
+        if($keluarga) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data Keluarga Berhasil Update!');
+        }
+
+        return redirect('/data-kk');
+    }
 }
