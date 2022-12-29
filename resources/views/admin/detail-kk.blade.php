@@ -96,7 +96,7 @@
                                     <div class="btn-group-sm">
                                         <a class="btn btn-primary btn-sm" href="/">Detail</a>
                                         <a class="btn btn-warning btn-sm" href="/edit-anggota/{{$item->id}}">Edit</a>
-                                        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                                        <a class="btn btn-danger btn-sm" href="/delete-anggota/{{$item->id}}">Hapus</a>
                                     </div>
                                 </td>
                             </tr>

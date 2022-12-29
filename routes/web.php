@@ -36,3 +36,5 @@ Route::put('/update-keluarga/{id}', [AdminController::class, 'update_keluarga'])
 Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');
 Route::get('/edit-anggota/{id}', [AdminController::class, 'edit_anggota'])->middleware('auth');
 Route::put('/update-anggota/{id}', [AdminController::class, 'update_anggota'])->middleware('auth');
+Route::get('/delete-anggota/{id}', [AdminController::class, 'delete_anggota'])->middleware('auth');
+Route::delete('/destroy-anggota/{id}', [AdminController::class, 'destroy_anggota'])->middleware('auth');

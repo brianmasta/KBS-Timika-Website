@@ -158,4 +158,24 @@ class AdminController extends Controller
 
         return redirect('/data-kk');
     }
+
+    public function delete_anggota($id)
+    {
+        $anggota = Anggota::findOrfail($id);
+
+        return view('admin.anggota-delete', ['anggota' => $anggota]);
+    }
+
+    public function destroy_anggota($id)
+    {
+        $anggota = Anggota::findOrfail($id);
+        $anggota->delete();
+
+        if($anggota) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data Anggota Berhasil Dihapus!');
+        }
+
+        return redirect('detail-kk/'. $anggota->kk_id);
+    }
 }

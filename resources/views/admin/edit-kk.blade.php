@@ -10,7 +10,6 @@
                     <h5>Edit Keluarga</h5>
                 </div>
                 <div class="card-body">
-                    <h2>{{ $keluarga }}</h2>
                     <div class="form-row">
                         <div class="col-md-6">
                             <form action="/update-keluarga/{{$keluarga->id}}" method="post">
