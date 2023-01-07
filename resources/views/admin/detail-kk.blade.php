@@ -65,7 +65,7 @@
                     </div>
                     <a class="btn btn-danger btn-sm" href="/data-kk">Kembali</a>
                     <hr>
-                    <a class="btn btn-warning btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah Anggota</a>
+                    <a class="btn btn-success btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah Anggota</a>
                     <br>
                     <br>
                     @if (Session::has('status'))
@@ -94,7 +94,7 @@
                                 <td>{{$item->perkawinan->name}}</td>
                                 <td>
                                     <div class="btn-group-sm">
-                                        <a class="btn btn-primary btn-sm" href="/">Detail</a>
+                                        {{-- <a class="btn btn-primary btn-sm" href="/">Detail</a> --}}
                                         <a class="btn btn-warning btn-sm" href="/edit-anggota/{{$item->id}}">Edit</a>
                                         <a class="btn btn-danger btn-sm" href="/delete-anggota/{{$item->id}}">Hapus</a>
                                     </div>

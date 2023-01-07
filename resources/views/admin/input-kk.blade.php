@@ -70,7 +70,7 @@
                                     <small id="emailHelp" class="form-text text-muted">No HP yang masih aktif.</small>
                                 </div>
                                 <button type="submit" class="btn  btn-primary">Submit</button>
-                                <a class="btn  btn-danger"href="/admin">Batal</a>
+                                <a class="btn  btn-danger"href="/data-kk">Batal</a>
                             </form>
                         </div>
                     </div>

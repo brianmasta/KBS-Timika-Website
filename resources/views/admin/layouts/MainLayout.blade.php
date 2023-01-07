@@ -79,10 +79,9 @@
 						<label>Navigation</label>
 					</li>
 					<li class="pc-item pc-hasmenu">
-						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Anggota</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Data Statistik</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 						<ul class="pc-submenu">
-							<li class="pc-item"><a class="pc-link" href="/data-kk">Data KK</a></li>
-							<li class="pc-item"><a class="pc-link" href="/input-kk">Input KK</a></li>
+							<li class="pc-item"><a class="pc-link" href="/data-kk">Keluarga</a></li>
 						</ul>
 					</li>
                     <li class="pc-item pc-hasmenu">

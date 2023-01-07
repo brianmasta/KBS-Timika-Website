@@ -10,6 +10,9 @@
                     <h5>Data Keluarga</h5>
                 </div>
                 <div class="card-body">
+                        <a class="btn btn-success" href="/input-kk">Tambah</a>
+                    <br>
+                    <br>
                     @if (Session::has('status'))
                     <div class="alert alert-success" role="alert">
                         {{Session::get('message')}}
