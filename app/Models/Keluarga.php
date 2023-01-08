@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Rayon;
+use App\Models\Anggota;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Keluarga extends Model
 {
@@ -12,6 +14,7 @@ class Keluarga extends Model
     protected $fillable = [
         'name',
         'alamat',
+        'rayon_id',
         'provinsi',
         'kabupaten',
         'distrik',
@@ -20,4 +23,15 @@ class Keluarga extends Model
         'pos',
         'hp'
     ];
+
+
+    public function anggotas()
+    {
+        return $this->hasMany(Anggota::class, 'kk_id', 'id');
+    }
+
+    public function rayon()
+    {
+        return $this->belongsTo(Rayon::class);
+    }
 }

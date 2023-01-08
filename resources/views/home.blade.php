@@ -50,6 +50,7 @@
           <li><a class="nav-link scrollto" href="#features">Bidang</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Galeri</a></li>
           <li><a class="nav-link scrollto" href="#team">Struktural</a></li>
+          <li><a class="nav-link scrollto" href="/login">Sistem Informasi</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>

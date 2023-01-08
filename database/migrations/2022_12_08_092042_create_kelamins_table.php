@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('keluargas', function (Blueprint $table) {
-            $table->string('rt', 10)->after('kelurahan');
+        Schema::create('kelamins', function (Blueprint $table) {
+            $table->id();
+            $table->string('name',30);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('keluargas', function (Blueprint $table) {
-            $table->dropColumn('rt');
-        });
+        Schema::dropIfExists('kelamins');
     }
 };

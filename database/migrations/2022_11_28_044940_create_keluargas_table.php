@@ -17,10 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('name',100);
             $table->string('alamat',100);
+            $table->bigInteger('rayon_id')->unsigned();
             $table->string('provinsi',100);
             $table->string('kabupaten',100);
             $table->string('distrik',100,null);
             $table->string('kelurahan',100,null);
+            $table->string('rt', 100);
             $table->string('pos',20,null);
             $table->string('hp',20,null);
             $table->timestamps();
